@@ -1,9 +1,9 @@
 import os
 import glob
 
-files = glob.glob('/media/covanan/data/Wokr/KisGroup/ESP32-P4-86PANEL-ETH-2RO/Arduino/libraries/lvgl/src/font/lv_font_*.c')
-files.extend(glob.glob('/home/covanan/Documents/PlatformIO/Projects/PlatformIO/src/fonts/ui_font_*.c'))
-
+base_dir = os.path.dirname(os.path.abspath(__file__))
+files = glob.glob(os.path.join(base_dir, 'lib/lvgl/src/font/lv_font_*.c'))
+files.extend(glob.glob(os.path.join(base_dir, 'src/fonts/ui_font_*.c')))
 for f in files:
     with open(f, 'r') as file:
         content = file.read()
