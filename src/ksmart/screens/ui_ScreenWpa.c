@@ -16,7 +16,7 @@ static lv_obj_t *wpa_modal_ssid_label;
 static lv_obj_t *wpa_modal_toggle_btn;
 static lv_obj_t *wpa_modal_toggle_label;
 
-static int last_network_count = -1;
+static int wpa_last_network_count = -1;
 
 static int wpa_row_indices[MAX_NETWORKS];
 static int wpa_selected_network_index = -1;
@@ -1107,8 +1107,8 @@ static void wpa_poll_timer_cb(lv_timer_t *timer) {
 
   if (old_connected != wpa_connected || old_connecting != wpa_connecting ||
       strcmp(old_ssid, wpa_connected_ssid) != 0 ||
-      last_network_count != network_count) {
-    last_network_count = network_count;
+      wpa_last_network_count != network_count) {
+    wpa_last_network_count = network_count;
     wpa_refresh_network_count();
     wpa_refresh_network_rows();
   }
@@ -1118,7 +1118,7 @@ static void wpa_poll_timer_cb(lv_timer_t *timer) {
  * + list + modal mật khẩu). */
 void ui_ScreenWpa_screen_init(void) {
   wpa_reset_cached_objects();
-  last_network_count = -1;
+  wpa_last_network_count = -1;
 
   ui_ScreenWpa = lv_obj_create(NULL);
   lv_obj_clear_flag(ui_ScreenWpa, LV_OBJ_FLAG_SCROLLABLE);

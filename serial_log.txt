@@ -1,0 +1,180 @@
+ESP-ROM:esp32p4-eco2-20240710
+Build:Jul 10 2024
+rst:0x1 (POWERON),boot:0x10f (SPI_FAST_FLASH_BOOT)
+SPI mode:DIO, clock div:1
+load:0x4ff33ce0,len:0x164c
+load:0x4ff29ed0,len:0xdfc
+load:0x4ff2cbd0,len:0x336c
+entry 0x4ff29ed0
+I (25) boot: ESP-IDF 5.5.1 2nd stage bootloader
+I (26) boot: compile time Jun 15 2026 17:54:18
+I (26) boot: Multicore bootloader
+I (27) boot: chip revision: v1.3
+I (29) boot: efuse block revision: v0.3
+I (32) boot.esp32p4: SPI Speed      : 80MHz
+I (36) boot.esp32p4: SPI Mode       : DIO
+I (40) boot.esp32p4: SPI Flash Size : 32MB
+I (44) boot: Enabling RNG early entropy source...
+I (48) boot: Partition Table:
+I (51) boot: ## Label            Usage          Type ST Offset   Length
+I (57) boot:  0 nvs              WiFi data        01 02 00009000 00006000
+I (63) boot:  1 phy_init         RF data          01 01 0000f000 00001000
+I (70) boot:  2 factory          factory app      00 00 00010000 00400000
+I (77) boot:  3 spiffs           Unknown data     01 82 00410000 00200000
+I (84) boot: End of partition table
+I (87) esp_image: segment 0: paddr=00010020 vaddr=40100020 size=d2214h (860692) map
+I (238) esp_image: segment 1: paddr=000e223c vaddr=30100000 size=00088h (   136) load
+I (239) esp_image: segment 2: paddr=000e22cc vaddr=4ff00000 size=0dd4ch ( 56652) load
+I (253) esp_image: segment 3: paddr=000f0020 vaddr=40000020 size=ffa14h (1047060) map
+I (429) esp_image: segment 4: paddr=001efa3c vaddr=4ff0dd4c size=07278h ( 29304) load
+I (436) esp_image: segment 5: paddr=001f6cbc vaddr=4ff15000 size=0379ch ( 14236) load
+I (445) boot: Loaded app from partition at offset 0x10000
+I (445) boot: Disabling RNG early entropy source...
+I (458) hex_psram: vendor id    : 0x0d (AP)
+I (458) hex_psram: Latency      : 0x01 (Fixed)
+I (458) hex_psram: DriveStr.    : 0x00 (25 Ohm)
+I (459) hex_psram: dev id       : 0x03 (generation 4)
+I (464) hex_psram: density      : 0x07 (256 Mbit)
+I (468) hex_psram: good-die     : 0x06 (Pass)
+I (472) hex_psram: SRF          : 0x02 (Slow Refresh)
+I (477) hex_psram: BurstType    : 0x00 ( Wrap)
+I (481) hex_psram: BurstLen     : 0x03 (2048 Byte)
+I (486) hex_psram: BitMode      : 0x01 (X16 Mode)
+I (490) hex_psram: Readlatency  : 0x02 (10 cycles@Fixed)
+I (495) hex_psram: DriveStrength: 0x00 (1/1)
+I (499) MSPI DQS: tuning success, best phase id is 0
+I (680) MSPI DQS: tuning success, best delayline id is 15
+I (681) esp_psram: Found 32MB PSRAM device
+I (681) esp_psram: Speed: 80MHz
+I (682) hex_psram: psram CS IO is dedicated
+I (685) cpu_start: Multicore app
+I (1974) esp_psram: SPI SRAM memory test OK
+I (1983) cpu_start: Pro cpu start user code
+I (1984) cpu_start: cpu freq: 360000000 Hz
+I (1984) app_init: Application information:
+I (1984) app_init: Project name:     PlatformIO
+I (1988) app_init: App version:      1
+I (1992) app_init: Compile time:     Jun 15 2026 17:53:50
+I (1997) app_init: ELF file SHA256:  f29de6422...
+I (2001) app_init: ESP-IDF:          5.5.1
+I (2005) efuse_init: Min chip rev:     v0.1
+I (2009) efuse_init: Max chip rev:     v1.99 
+I (2013) efuse_init: Chip rev:         v1.3
+I (2017) heap_init: Initializing. RAM available for dynamic allocation:
+I (2023) heap_init: At 4FF1EFD0 len 0001BFF0 (111 KiB): RAM
+I (2029) heap_init: At 4FF3AFC0 len 00004BF0 (18 KiB): RAM
+I (2034) heap_init: At 4FF40000 len 00060000 (384 KiB): RAM
+I (2039) heap_init: At 50108080 len 00007F80 (31 KiB): RTCRAM
+I (2044) heap_init: At 30100088 len 00001F78 (7 KiB): TCM
+I (2050) esp_psram: Adding pool of 32768K of PSRAM memory to heap allocator
+I (2057) spi_flash: detected chip: gd
+I (2060) spi_flash: flash io: dio
+I (2064) main_task: Started on CPU0
+I (2100) esp_psram: Reserving pool of 32K of internaArduino GFX + LVGL Integration
+W (3105) i2c.master: Please check pull-up resistances whether be connected properly. Otherwise unexpected behavior would happen. For more detailed information, please read docs
+I (3320) GT911: Initialize I2C panel IO
+I (3320) GT911: Initialize touch controller GT911
+I (3340) GT911: TouchPad_ID:0x39,0x31,0x31
+I (3340) GT911: TouchPad_Config_Version:70
+I (3476) Arduino_ESP32DSIPanel: MIPI DSI PHY Powered on
+I (3477) Arduino_ESP32DSIPanel: Install MIPI DSI LCD control panel
+I (3837) uart: queue free spaces: 20
+I (7103) uart: queue free spaces: 20
+[Web Service] Đang chờ mạng LAN...
+[ui-json] Found all_relay_delay_ms: 1000
+[ui-json] Found screen_sleep_seconds: 300
+[ui-json] Checking device at p offset 65
+[ui-json] Found slave_id 0
+[ui-json] slave_id 0 -> board_offset 0
+[ui-json] dev 0, coil 0 -> relay_index 1, name: Relay 1
+[ui-json] dev 0, coil 1 -> relay_index 2, name: Relay 2
+[ui-json] Checking device at p offset 109
+[ui-json] Found slave_id 1
+[ui-json] slave_id 1 -> board_offset 2
+[ui-json] dev 1, coil 0 -> relay_index 3, name: Relay 1
+[ui-json] dev 1, coil 1 -> relay_index 4, name: Relay 2
+[ui-json] dev 1, coil 2 -> relay_index 5, name: Relay 3
+[ui-json] dev 1, coil 3 -> relay_index 6, name: Relay 4
+[ui-json] dev 1, coil 4 -> relay_index 7, name: Relay 5
+[ui-json] dev 1, coil 5 -> relay_index 8, name: Relay 6
+[ui-json] dev 1, coil 6 -> relay_index 9, name: Relay 7
+[ui-json] dev 1, coil 7 -> relay_index 10, name: Relay 8
+[ui-json] dev 1, coil 8 -> relay_index 11, name: Relay 9
+[ui-json] dev 1, coil 9 -> relay_index 12, name: Relay 10
+[ui-json] dev 1, coil 10 -> relay_index 13, name: Relay 11
+[ui-json] dev 1, coil 11 -> relay_index 14, name: Relay 12
+[ui-json] dev 1, coil 12 -> relay_index 15, name: Relay 13
+[ui-json] dev 1, coil 13 -> relay_index 16, name: Relay 14
+[ui-json] dev 1, coil 14 -> relay_index 17, name: Relay 15
+[ui-json] dev 1, coil 15 -> relay_index 18, name: Relay 16
+[ui-json] Checking device at p offset 363
+[ui-json] Found slave_id 2
+[ui-json] slave_id 2 -> board_offset 18
+[ui-json] dev 2, coil 0 -> relay_index 19, name: Relay 17
+[ui-json] dev 2, coil 1 -> relay_index 20, name: Relay 18
+[ui-json] dev 2, coil 2 -> relay_index 21, name: Relay 19
+[ui-json] dev 2, coil 3 -> relay_index 22, name: Relay 20
+[ui-json] dev 2, coil 4 -> relay_index 23, name: Relay 21
+[ui-json] dev 2, coil 5 -> relay_index 24, name: Relay 22
+[ui-json] dev 2, coil 6 -> relay_index 25, name: Relay 23
+[ui-json] dev 2, coil 7 -> relay_index 26, name: Relay 24
+Không thể tạo file tạm tên relay /ksmart_relay_names.conf.tmp: No such file or directory
+[Network] Khởi tạo Ethernet (IP101)...
+I (10706) esp_eth.netif.netif_glue: 80:f1:b2:d0:61:23
+I (10706) esp_eth.netif.netif_glue: ethernet attached to netif
+[Network] ETH Started
+[Network] ETH Cable Plugged In
+[Network] Khởi tạo WiFi...
+I (12958) H_API: ESP-Hosted starting. Hosted_Tasks: prio:23, stack: 5120 RPC_task_stack: 5120
+W (12958) H_API: ESP-Hosted config valid; reuse existing config
+I (12963) H_API: ** add_esp_wifi_remote_channels **
+I (12969) H_SDIO_DRV: sdio_data_to_rx_buf_task started
+I (12973) transport: Attempt connection with slave: retry[0]
+W (12978) H_SDIO_DRV: Reset slave using GPIO[54]
+I (12982) os_wrapper_esp: GPIO [54] configured
+I (14026) esp_netif_handlers: eth0 ip: 10.15.128.30, mask: 255.255.255.0, gw: 10.15.128.1
+[Network] ETH Connected. IP: 10.15.128.30, MAC: 80:F1:B2:D0:61:23
+[Web Service] Đã chạy HTTP Server tại cổng 80
+I (14506) sdio_wrapper: SDIO master: Slot 1, Data-Lines: 4-bit Freq(KHz)[40000 KHz]
+I (14506) sdio_wrapper: GPIOs: CLK[18] CMD[19] D0[14] D1[15] D2[16] D3[17] Slave_Reset[54]
+I (14510) sdio_wrapper: Queues: Tx[20] Rx[20] SDIO-Rx-Mode[1]
+I (14550) sdio_wrapper: Function 0 Blocksize: 512
+I (14551) sdio_wrapper: Function 1 Blocksize: 512
+I (14651) H_SDIO_DRV: Card init success, TRANSPORT_RX_ACTIVE
+I (14651) transport: set_transport_state: 1
+I (14651) transport: Waiting for esp_hosted slave to be ready
+I (14673) H_SDIO_DRV: SDIO Host operating in STREAMING MODE
+I (14673) H_SDIO_DRV: Open data path at slave
+I (14673) H_SDIO_DRV: Starting SDIO process rx task
+I (14680) H_SDIO_DRV: Received ESP_PRIV_IF type message
+I (14680) transport: Received INIT event from ESP32 peripheral
+I (14686) transport: EVENT: 12
+I (14689) transport: Identified slave [esp32c6]
+I (14693) transport: EVENT: 11
+I (14696) transport: capabilities: 0xd
+I (14699) transport: Features supported are:
+I (14703) transport: 	 * WLAN
+I (14706) transport: 	   - HCI over SDIO
+I (14710) transport: 	   - BLE only
+I (14713) transport: EVENT: 13
+W (14716) transport: Version mismatch: Host [2.12.0] > Co-proc [0.0.0] ==> Upgrade co-proc to avoid RPC timeouts
+I (14726) transport: ESP board type is : 13 
+
+I (14730) transport: Base transport is set-up, TRANSPORT_TX_ACTIVE
+I (14736) H_API: Transport active
+I (14739) transport: Slave chip Id[12]
+I (14742) transport: raw_tp_dir[-], flow_ctrl: low[60] high[80]
+I (14748) transport: transport_delayed_init
+I (14752) esp_cli: Registering command: crash
+I (14756) esp_cli: Registering command: reboot
+I (14760) esp_cli: Registering command: mem-dump
+I (14764) esp_cli: Registering command: task-dump
+I (14769) esp_cli: Registering command: cpu-dump
+I (14773) esp_cli: Registering command: heap-trace
+I (14778) esp_cli: Registering command: sock-dump
+I (14782) esp_cli: Registering command: host-power-save
+I (14787) hci_stub_drv: Host BT Support: Disabled
+I (14791) H_SDIO_DRV: Received INIT event
+I (14795) H_SDIO_DRV: Event type: 0x22
+I (14799) H_SDIO_DRV: Write thread started
+I (14974) RPC_WRAP: Coprocessor Boot-up
