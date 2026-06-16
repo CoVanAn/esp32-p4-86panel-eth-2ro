@@ -1,0 +1,11 @@
+name: ksmart_platformio_project
+version: 0.1.0
+
+# Use IDF Component Manager to fetch these dependencies automatically
+dependencies:
+  espressif/esp_hosted: "*"
+  espressif/esp_wifi_remote: "*"
+
+# Note: PlatformIO with framework=espidf will invoke the ESP-IDF component manager
+# when building. If the build environment does not fetch components automatically,
+# revert to cloning into `components/` or add an extra script to download them.

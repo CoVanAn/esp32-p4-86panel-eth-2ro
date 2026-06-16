@@ -1,0 +1,12 @@
+{
+	"folders": [
+		{
+			"path": "../../../../../../media/covanan/data/Wokr/KisGroup/ESP32-P4-86PANEL-ETH-2RO"
+		},
+		{
+			"name": "PlatformIO",
+			"path": "."
+		}
+	],
+	"settings": {}
+}
