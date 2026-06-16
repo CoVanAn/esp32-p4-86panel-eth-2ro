@@ -1264,7 +1264,7 @@ static void create_stats_row(void) {
 
   /* Label "Tất cả:" */
   lv_obj_t *label_all = lv_label_create(stats_row);
-  lv_obj_set_pos(label_all, SCREEN_W - 245, 28);
+  lv_obj_set_pos(label_all, SCREEN_W - 255, 28);
   lv_label_set_text(label_all, "Tất cả:");
   lv_obj_set_style_text_color(label_all, lv_color_hex(0x7DD3FC),
                               LV_PART_MAIN | LV_STATE_DEFAULT);
@@ -1273,8 +1273,8 @@ static void create_stats_row(void) {
 
   /* Nút "Bật" */
   btn_all_on = lv_btn_create(stats_row);
-  lv_obj_set_size(btn_all_on, 75, 44);
-  lv_obj_set_pos(btn_all_on, SCREEN_W - 170, 18);
+  lv_obj_set_size(btn_all_on, 88, 54);
+  lv_obj_set_pos(btn_all_on, SCREEN_W - 190, 12);
   lv_obj_clear_flag(btn_all_on, LV_OBJ_FLAG_SCROLLABLE);
   lv_obj_set_style_radius(btn_all_on, 12, LV_PART_MAIN | LV_STATE_DEFAULT);
   lv_obj_set_style_bg_color(btn_all_on, lv_color_hex(0x0B2B4A),
@@ -1295,8 +1295,8 @@ static void create_stats_row(void) {
 
   /* Nút "Tắt" */
   btn_all_off = lv_btn_create(stats_row);
-  lv_obj_set_size(btn_all_off, 75, 44);
-  lv_obj_set_pos(btn_all_off, SCREEN_W - 85, 18);
+  lv_obj_set_size(btn_all_off, 88, 54);
+  lv_obj_set_pos(btn_all_off, SCREEN_W - 90, 12);
   lv_obj_clear_flag(btn_all_off, LV_OBJ_FLAG_SCROLLABLE);
   lv_obj_set_style_radius(btn_all_off, 12, LV_PART_MAIN | LV_STATE_DEFAULT);
   lv_obj_set_style_bg_color(btn_all_off, lv_color_hex(0x0B2B4A),

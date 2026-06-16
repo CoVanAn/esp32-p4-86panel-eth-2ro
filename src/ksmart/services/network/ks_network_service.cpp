@@ -182,15 +182,25 @@ static void sync_ui_state(void) {
 
   if (ui_LabelWifiIP != NULL) {
     if (WiFi.status() == WL_CONNECTED) {
-      String wifi_text =  WiFi.localIP().toString();
+      String wifi_text = WiFi.localIP().toString();
       lv_label_set_text(ui_LabelWifiIP, wifi_text.c_str());
       if (ui_ImageWifi != NULL) {
         lv_img_set_src(ui_ImageWifi, &ui_img_icon_wifi_on_png);
+      }
+      if (ui_LabelWifiName != NULL) {
+        String ssid = ks_network_get_wifi_ssid();
+        if (ssid.length() > 12) {
+          ssid = ssid.substring(0, 12) + "...";
+        }
+        lv_label_set_text(ui_LabelWifiName, ssid.c_str());
       }
     } else {
       lv_label_set_text(ui_LabelWifiIP, "Chưa kết nối");
       if (ui_ImageWifi != NULL) {
         lv_img_set_src(ui_ImageWifi, &ui_img_icon_wifi_off_png);
+      }
+      if (ui_LabelWifiName != NULL) {
+        lv_label_set_text(ui_LabelWifiName, "Wi-Fi");
       }
     }
   }
@@ -274,7 +284,8 @@ void wifi_scr_init(void) {
 
 int wifi_scanning_ssid(void) {
   if (!is_scanning_wifi) {
-    WiFi.scanNetworks(true); // tham số true = chạy ngầm (async)
+    // async=true, show_hidden=false, passive=false, max_ms_per_chan=120
+    WiFi.scanNetworks(true);
     is_scanning_wifi = true;
     network_count = 0;
     Serial.println("[Network] Đang bắt đầu quét WiFi ở chế độ ngầm...");
